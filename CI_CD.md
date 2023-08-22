@@ -16,3 +16,9 @@
 [actions/checkout](https://github.com/actions/checkout)
 
 * checks out a branch
+
+[paulo-ferraz-oliveira/parse-tool-versions](https://github.com/paulo-ferraz-oliveira/parse-tool-versions)
+
+* parse tool versions
+
+* available at `steps.tool-versions.outputs.[tool]`
