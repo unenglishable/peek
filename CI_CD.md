@@ -22,3 +22,13 @@
 * parse tool versions
 
 * available at `steps.tool-versions.outputs.[tool]`
+
+[erlef/setup-beam](https://github.com/erlef/setup-beam)
+
+* sets up beam environment for running elixir
+
+* configured to read elixir/otp versions from `.tool-versions`.
+
+* why?  asdf also uses `.tool-versions` to ensure that the correct version of
+  elixir and erlang are installed.  this limits versions to a single source of
+  truth for CI/CD purposes :)
