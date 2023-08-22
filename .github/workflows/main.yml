@@ -105,3 +105,15 @@ jobs:
             priv/plts
       - name: Run dialyzer
         run: mix dialyzer --format github
+  release_job:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.3
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v3.4.2
+        with:
+          branches: ['main']
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
