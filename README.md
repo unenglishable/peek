@@ -1,5 +1,7 @@
 # Peek
 
+[![Build Status](https://github.com/unenglishable/peek/actions/workflows/main.yml/badge.svg)](https://github.com/unenglishable/peek/actions)
+
 Phoenix server for Peek project
 
 
