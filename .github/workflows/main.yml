@@ -17,11 +17,11 @@ jobs:
           access_token: ${{ github.token }}
       - name: Get branch name
         id: branch-name
-        uses: tj-actions/branch-names@v6.1
+        uses: tj-actions/branch-names@v7
       - name: Checkout
         uses: actions/checkout@v3.1.0
         with:
-          ref: ${{ github.event.client_payload.branch }}
+          ref: ${{ steps.branch-name.outputs.default_branch }}
       - name: Parse .tool-versions
         id: tool-versions
         uses: paulo-ferraz-oliveira/parse-tool-versions@v1
