@@ -106,6 +106,7 @@ jobs:
       - name: Run dialyzer
         run: mix dialyzer --format github
   release_job:
+    needs: [static-code-analysis]
     name: Release
     runs-on: ubuntu-latest
     steps:
