@@ -142,6 +142,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           deploy_key: ${{ secrets.DOCS_DEPLOY_KEY }}
-          external_repository: unenglishable/peek.unenglishable.github.io
           publish_dir: ./doc
           publish_branch: gh-pages
