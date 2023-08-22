@@ -10,7 +10,7 @@
 
 * get branch name for checkout step
 
-* saved to `steps.branch-name.outputs`
+* saved to `steps.branch-name.outputs.[branch_type]`
   (see [docs](https://github.com/tj-actions/branch-names#usage) for more info)
 
 [actions/checkout](https://github.com/actions/checkout)
