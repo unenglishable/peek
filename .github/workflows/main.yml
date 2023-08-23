@@ -2,6 +2,10 @@ name: CI/CD workflow
 
 on:
   push:
+    branches:
+      - "**"
+    tags:
+      - "v*.*.*"
   pull_request:
     types: [opened]
     branches:
