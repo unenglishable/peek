@@ -136,6 +136,14 @@ jobs:
         with:
           version-file: .tool-versions
           version-type: strict
+      - name: Retrieve cached dependencies
+        uses: actions/cache@v3.3.1
+        id: mix-cache
+        with:
+          path: |
+            deps
+            _build
+          key: ${{ runner.os }}-${{ steps.tool-versions.outputs.erlang }}-${{ steps.tool-versions.outputs.elixir }}-${{ hashFiles('mix.lock') }}
       - name: Build docs
         uses: lee-dohm/generate-elixir-docs@v1.0.1
       - name: Publish to Pages
